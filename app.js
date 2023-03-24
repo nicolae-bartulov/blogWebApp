@@ -90,10 +90,10 @@ app.post("/compose", function(req, res){
 
 });
 
-app.get("/posts/:postName", function(req, res){
-  const requestedTitle = req.params.postName;
+app.get("/posts/:postId", function(req, res){
+  const requestedId = req.params.postId;
 
-  Post.findOne({postTitle: requestedTitle}).exec().then(function(post){
+  Post.findOne({_id: requestedId}).exec().then(function(post){
     res.render("post", {
       title: post.postTitle,
       content: post.postBody
