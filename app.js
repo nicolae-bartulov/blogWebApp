@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://nbartulov:Volutrab3.Atla@cluster0.krbvlwc.mongodb.net/blogDB");
+mongoose.connect("mongodb+srv://nbartulov:test1234@cluster0.krbvlwc.mongodb.net/blogDB");
 
 //Mongoose Schema
 // const descriptionSchema = new mongoose.Schema({
